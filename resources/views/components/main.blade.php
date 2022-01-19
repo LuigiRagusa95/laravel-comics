@@ -1,3 +1,5 @@
 <main>
-    <div class="container"></div>
+    <div class="container">
+        @include('components.cards')
+    </div>
 </main>

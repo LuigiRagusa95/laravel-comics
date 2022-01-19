@@ -1,0 +1,47 @@
+.cards {
+    display: flex;
+    padding: 2rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .card {
+        display: flex;
+        padding: 1rem;
+        cursor: pointer;
+        flex-direction: column;
+        width: calc((100% - 2rem) / 6);
+
+        > a {
+            display: flex;
+            flex-direction: column;
+
+            > .card-image {
+                overflow: hidden;
+                position: relative;
+                padding-bottom: calc(100% * 1);
+
+                > img {
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    object-position: top;
+                }
+            }
+
+            > .card-title {
+                display: block;
+                color: #ffffff;
+                overflow: hidden;
+                padding: 0.5rem 0;
+                font-size: 0.875rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                letter-spacing: 0.02rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
