@@ -1,47 +1,71 @@
-.cards {
+.section-cards {
     display: flex;
-    padding: 2rem;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
 
-    .card {
+    > .cards {
         display: flex;
-        padding: 1rem;
-        cursor: pointer;
-        flex-direction: column;
-        width: calc((100% - 2rem) / 6);
+        padding: 2rem;
+        flex-wrap: wrap;
+        align-items: flex-start;
 
-        > a {
+        .card {
             display: flex;
+            padding: 1rem;
+            cursor: pointer;
             flex-direction: column;
+            width: calc((100% - 2rem) / 6);
 
-            > .card-image {
-                overflow: hidden;
-                position: relative;
-                padding-bottom: calc(100% * 1);
+            > a {
+                display: flex;
+                flex-direction: column;
 
-                > img {
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    position: absolute;
-                    object-position: top;
+                > .card-image {
+                    overflow: hidden;
+                    position: relative;
+                    padding-bottom: calc(100% * 1);
+
+                    > img {
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: absolute;
+                        object-position: top;
+                    }
+                }
+
+                > .card-title {
+                    display: block;
+                    color: #ffffff;
+                    overflow: hidden;
+                    padding: 0.5rem 0;
+                    font-size: 0.875rem;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    letter-spacing: 0.02rem;
+                    text-transform: uppercase;
                 }
             }
+        }
+    }
 
-            > .card-title {
-                display: block;
-                color: #ffffff;
-                overflow: hidden;
-                padding: 0.5rem 0;
-                font-size: 0.875rem;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                letter-spacing: 0.02rem;
-                text-transform: uppercase;
-            }
+    > div:last-of-type {
+        button {
+            display: flex;
+            color: #ffffff;
+            cursor: pointer;
+            appearance: none;
+            font-weight: 600;
+            padding: 0.5rem 3rem;
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+            align-items: center;
+            justify-content: center;
+            border: 0 solid #000000;
+            text-transform: uppercase;
+            background-color: #0182f9;
         }
     }
 }
