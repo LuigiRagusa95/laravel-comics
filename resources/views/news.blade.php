@@ -2,5 +2,5 @@
 
 @section('body')
 @include('components.header') 
-@include('components.main') 
+<h1>News Page</h1>
 @stop
