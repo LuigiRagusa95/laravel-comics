@@ -277,12 +277,16 @@ footer::before {
   left: 0;
   bottom: 0;
   width: 100%;
+  display: block;
   color: #ffffff;
   padding: 0 1rem;
+  overflow: hidden;
+  white-space: pre;
   position: absolute;
   text-align: center;
   font-size: 0.75rem;
   line-height: 1.5rem;
+  text-overflow: ellipsis;
   content: attr(data-series);
   background-color: #01a9da;
 }
