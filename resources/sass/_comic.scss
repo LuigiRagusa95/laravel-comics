@@ -203,6 +203,12 @@
                     margin-bottom: 0.25rem;
                     text-transform: uppercase;
                 }
+
+                > figure {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                }
             }
         }
     }

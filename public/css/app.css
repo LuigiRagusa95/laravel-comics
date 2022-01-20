@@ -392,6 +392,11 @@ footer::before {
   margin-bottom: 0.25rem;
   text-transform: uppercase;
 }
+.content .body .container > div:first-of-type aside > figure {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 
 *,
 *::before,
