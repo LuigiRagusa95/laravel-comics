@@ -1,0 +1,205 @@
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        display: flex;
+        height: 400px;
+        position: relative;
+        flex-direction: column;
+
+        > figure {
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            pointer-events: none;
+
+            > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+        > section {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            .container {
+                height: 100%;
+                margin: 0 auto;
+                max-width: 1200px;
+
+                > div:first-of-type {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    padding: 1rem;
+                    position: relative;
+                    align-items: flex-end;
+
+                    .poster {
+                        width: 160px;
+                        overflow: hidden;
+                        position: relative;
+                        margin-bottom: 0.5rem;
+                        border: 1px solid #ffffff;
+
+                        > img {
+                            width: 100%;
+                            display: block;
+                            object-fit: contain;
+                        }
+
+                        &::before {
+                            top: 0;
+                            left: 0;
+                            color: #ffffff;
+                            padding: 0 1rem;
+                            position: absolute;
+                            font-size: 0.75rem;
+                            line-height: 1.5rem;
+                            content: attr(data-type);
+                            background-color: #01a9da;
+                        }
+
+                        &::after {
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            color: #ffffff;
+                            padding: 0 1rem;
+                            position: absolute;
+                            text-align: center;
+                            font-size: 0.75rem;
+                            line-height: 1.5rem;
+                            content: attr(data-series);
+                            background-color: #01a9da;
+                        }
+                    }
+                }
+            }
+
+            &::before {
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 3rem;
+                content: "";
+                position: absolute;
+                background-color: #0182f9;
+            }
+        }
+    }
+
+    .body {
+        .container > div:first-of-type {
+            display: flex;
+            padding: 4rem 1rem;
+            align-items: flex-start;
+
+            .container-content {
+                width: 70%;
+                display: flex;
+                padding: 1rem;
+                flex-direction: column;
+
+                > h1 {
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    margin-bottom: 1rem;
+                    text-transform: uppercase;
+                }
+
+                > div {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                    background-color: #f2f2f2;
+                    border-bottom: 2px solid #e5e5e5;
+
+                    > div:first-of-type {
+                        width: 100%;
+                        display: flex;
+                        padding: 1rem;
+                        color: #a5f182;
+                        font-size: 0.875rem;
+                        line-height: 1.5rem;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        > .price {
+                            color: #ffffff;
+                        }
+
+                        > .price strong,
+                        > .label strong {
+                            color: #a5f182;
+                            font-weight: 600;
+                        }
+                    }
+
+                    > div:last-of-type {
+                        height: 100%;
+                        cursor: pointer;
+                        border-left: 2px solid #4fa253;
+                        padding: 1rem calc(2rem + 6px) 1rem 2rem;
+
+                        > button {
+                            border: 0;
+                            outline: none;
+                            color: #ffffff;
+                            font-weight: 600;
+                            appearance: none;
+                            position: relative;
+                            white-space: nowrap;
+                            line-height: 1.5rem;
+                            letter-spacing: 0.02rem;
+                            background-color: transparent;
+
+                            &::before {
+                                z-index: 2;
+                                content: "";
+                                position: absolute;
+                                top: calc((100% - 6px) / 2);
+                                border: 6px solid transparent;
+                                border-top-color: #ffffff;
+                                left: calc((100%) + (6px / 2) + 0.5rem);
+                            }
+                        }
+                    }
+
+                    &.available {
+                        background-color: #55ba5a;
+                        border-bottom: 2px solid #4fa253;
+                    }
+                }
+
+                > p {
+                    font-size: 1rem;
+                    color: #333333;
+                    line-height: 1.5rem;
+                }
+            }
+
+            aside {
+                width: 30%;
+                > h3 {
+                    text-align: end;
+                    font-weight: 600;
+                    line-height: 2rem;
+                    font-size: 0.75rem;
+                    margin-bottom: 0.25rem;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

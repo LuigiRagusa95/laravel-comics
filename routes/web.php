@@ -22,12 +22,12 @@ Route::get('news', function () {
     return view('news');
 })->name('news');
 
-Route::get('product/{id}', function ($id) {
+Route::get('comic/{id}', function ($id) {
     $comics = config('comics');
     if (is_numeric($id) && $id > -1 && $id < count($comics)) {
         $comic = $comics[$id];
     } else {
         abort(404);
     }
-    return view('product', ['comic' => $comic]);
-})->name('product');
+    return view('comic', ['comic' => $comic]);
+})->name('comic');

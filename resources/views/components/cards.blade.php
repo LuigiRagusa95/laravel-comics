@@ -2,7 +2,7 @@
     <ul class="cards">
         @foreach ($comics as $index => $item)
             <li class="card">
-                <a href="{{ route('product', ['id' => $index]) }}">
+                <a href="{{ route('comic', ['id' => $index]) }}">
                     <div class="card-image">
                         <img src="{{$item['thumb']}}" alt="{{$item['title']}}">
                     </div>
